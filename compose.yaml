@@ -12,6 +12,9 @@ services:
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
       - ./docker/mysql/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
+    networks:
+      - symfony
 
-  php:
-  
+networks:
+  symfony:
+    name: symfony
